@@ -17,4 +17,9 @@ form address import Address
     """
     the  init above will test if our objects are initialized well
     """"
-    
+    self.assertEqual(self.new_Address username,"Anitha987")
+    self.assertEqual(self.new_Address email,"anithaumuhire@gmail.com")
+    self.assertEqual(self.new_Address username,"kigali555")
+
+    if_name_=='_main_':
+      unittest.main()
