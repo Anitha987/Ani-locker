@@ -15,4 +15,6 @@ form address import Address
    self.new_address=Address("Anitha987","anithaumuhire@gmail.com","kigali555")
   def test_init(self):
     """
-    the  init above will test if  
+    the  init above will test if our objects are initialized well
+    """"
+    
