@@ -9,3 +9,4 @@ class Address:
    Args:
    username:New address username.
    email:New  address e-mail.
+   password:New address password
