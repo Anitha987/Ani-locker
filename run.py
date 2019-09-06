@@ -25,3 +25,8 @@ from address import address
     Function that check if the address exists with that email and return a Boolean
     '''
     return Address.address_exist(email)
+  def display_address():
+    '''
+    Function that returns all the saved address
+    '''
+    return Address.display_address()  
