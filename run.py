@@ -17,7 +17,11 @@ from address import address
     address.delete_address()  
   def find_address(email):
   '''
-  Function that finds a contact by address and returns the contact
+  Function that finds an address by email and returns the contact
   '''
   return Address.find_by_email(email)
-  def
+  def check_existing_address(email):
+    '''
+    Function that check if the address exists with that email and return a Boolean
+    '''
+    return Address.address_exist(email)
