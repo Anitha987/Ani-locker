@@ -1,3 +1,4 @@
+import pyperclip
 import unittest
 from credential import Credential
 
@@ -30,6 +31,40 @@ class TestCredential(unittest.TestCase):
       '''tearDown method will help us to clean up once  each test has been run
       '''
       Credential.credential_list=[]   
+  def test_save_multiple_credential(self):
+    '''
+    test_save_multiple_credential to check if we can save multiple credential objects to our credential_list
+    '''
+    self.new_credential.save_credential()   
+    test_credential=Credential("Ronah","ronah@gmail.com","ronah123","instagram")
+    test_credential.save_credential()
+    self.assertEqual(len(Credential.credential_list),2) 
+  def test_find_credential(self):
+      '''
+      test_find_address help to testif we want to search one of our information
+      '''
+      self.new_credential.save_credential()
+      test_credential=Credential("Ronah","ronah@gmail.com","ronah123","instagram")
+      test_credential.save_credential()
+      found_credential = Credential.find_by_email("ronah@gmail.com")
+      self.assertEqual(found_credential.email,test_credential.email) 
+  def test_credential_exists(self):
+    '''
+    test and see bty the time our address is not found to return a boolean.
+    '''
+    self.new_credential.save_credential
+    test_credential=Credential("Ronah","ronah@gmail.com","ronah123","instagram")
+    test_credential.save_credential()
+    credential_exists=Credential.credential_exist("ronah@gmail.com")
+    self.assertTrue(credential_exists) 
+  def test_copy_email(self):
+    '''
+    Test to confirm that we are copying the email address  from a found address  
+    '''
+    self.new_credential.save_credential()
+    Credential.copy_email("anithaumuhire@gmail.com")
+    self.assertEqual(self.new_credential.email,pyperclip.paste())   
+
 if __name__ == '__main__':
     unittest.main()
 
