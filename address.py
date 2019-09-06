@@ -1,3 +1,4 @@
+import pyperclip
 class Address:
     """
     created a Class that will generate user's info
@@ -5,14 +6,13 @@ class Address:
     address_list=[]
     def __init__(self,username,email,password):
 
-        '''
-    _init_method which is going to help us define      properties for all our objects.
+      '''
+      _init_method which is going to help us define our properties for all our objects.
       Args:
-            
-        '''
-        self.username=username
-        self.email= email
-        self.password =  password
+      '''
+      self.username=username
+      self.email= email
+      self.password = password  
     def save_address(self):
       '''
       save address method will help us to save address  objects into address-list
@@ -54,6 +54,10 @@ class Address:
       '''
       method that returns our address list
       '''
-      return cls.address_listy              
- 
+      return cls.address_list
+    @classmethod
+    def copy_email(cls,email):
+      email_found=Address.find_by_email(email)
+      pyperclip.copy(email_found.email)            
+
            

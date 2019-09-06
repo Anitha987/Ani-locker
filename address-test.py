@@ -70,6 +70,9 @@ class TestAddress(unittest.TestCase):
       '''
       Test to confirm that we are copying the email address  from a found address  
       '''
+      self.new_address.save_address()
+      Address.copy_email("anithaumuhire@gmail.com")
+      self.assertEqual(self.new_address.email,pyperclip.paste())
 if __name__ == '__main__':
     unittest.main()
   
