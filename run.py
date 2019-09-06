@@ -10,3 +10,13 @@ from address import address
     Function to save address
     '''
     address.save_address()
+  def del_address(address):
+    '''
+    Function to delete an address
+    '''
+    address.delete_address()  
+  def find_address(email):
+  '''
+  Function that finds a contact by address and returns the contact
+  '''
+  return Address.find_by_email(email) 
