@@ -19,4 +19,5 @@ from address import address
   '''
   Function that finds a contact by address and returns the contact
   '''
-  return Address.find_by_email(email) 
+  return Address.find_by_email(email)
+  def
