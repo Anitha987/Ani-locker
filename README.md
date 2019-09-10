@@ -2,10 +2,11 @@
 
 ###{Ani-locker project}
 
-##Description This project is all about the password locker
+##Description This project is all about the password locker where one is able to create an account using username email and password.
 ##Development server
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files. 
-###Setup/Installation Requirements my end user must have chrome must have visual code studio bootstrap ubuntu setup. ##Technologies Used My project used HTML,CSS,bootstrap,angular and javascript languages.
+###Setup/Installation Requirements my end user must have chrome must have visual code studio bootstrap ubuntu setup.
+ ##Technologies Used My project used python.
 
 ##Code scaffolding
 Run ng generate component component-name to generate a new component. You can also use ng generate directive|pipe|service|class|guard|interface|enum|module. ##Support and contact details If you encount any problem please let me know.below is my email 
