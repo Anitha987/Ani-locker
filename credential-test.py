@@ -41,7 +41,7 @@ class TestCredential(unittest.TestCase):
     self.assertEqual(len(Credential.credential_list),2) 
   def test_find_credential(self):
       '''
-      test_find_address help to testif we want to search one of our information
+      test_find_address help to test if we want to search one of our information
       '''
       self.new_credential.save_credential()
       test_credential=Credential("Ronah","ronah@gmail.com","ronah123","instagram")
@@ -63,7 +63,14 @@ class TestCredential(unittest.TestCase):
     '''
     self.new_credential.save_credential()
     Credential.copy_email("anithaumuhire@gmail.com")
-    self.assertEqual(self.new_credential.email,pyperclip.paste())   
+    self.assertEqual(self.new_credential.email,pyperclip.paste())
+  def test_login(self):
+    '''
+    test  to login into our credentials
+    '''
+    self.new_credential.save_credential()
+    test_credential=Credential("Ronah","ronah@gmail.com","ronah123","instagram")
+    self.assertTrue(self.new_credential.email)    
 
 if __name__ == '__main__':
     unittest.main()

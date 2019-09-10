@@ -59,7 +59,7 @@ class TestAddress(unittest.TestCase):
       self.assertEqual(found_address.email,test_address.email)
     def test_address_exists(self):
       '''
-      test and see bty the time our address is not found to return a boolean.
+      test and see by the time our address is not found to return a boolean.
       '''
       self.new_address.save_address
       test_address=Address("Ronah","ronah@gmail.com","ronah123")
@@ -73,6 +73,15 @@ class TestAddress(unittest.TestCase):
       self.new_address.save_address()
       Address.copy_email("anithaumuhire@gmail.com")
       self.assertEqual(self.new_address.email,pyperclip.paste())
+    def test_login(self):
+      '''
+      test  to login into our credentials
+      '''
+      self.new_address.save_address()
+      test_address=Address("Ronah","ronah@gmail.com","ronah123")
+      self.assertTrue(self.new_address.email)
+
+
 if __name__ == '__main__':
     unittest.main()
   

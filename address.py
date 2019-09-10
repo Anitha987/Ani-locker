@@ -58,6 +58,22 @@ class Address:
     @classmethod
     def copy_email(cls,email):
       email_found=Address.find_by_email(email)
-      pyperclip.copy(email_found.email)            
+      pyperclip.copy(email_found.email)
+
+    def login(self,username, password):
+      self.username = username
+      self.password = password
+      self.error = "Enter a valid username and password"
+    @classmethod  
+    def check(cls,username,password):
+        
+      current=''
+
+      for address in Address.address_list:    
+        if (address.username == log_username and address.password == log_pass):
+          current=address.username
+      return current
+    
+
 
            

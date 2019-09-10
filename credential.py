@@ -1,3 +1,4 @@
+import address
 import pyperclip
 class Credential:
   """
@@ -58,4 +59,13 @@ class Credential:
   @classmethod
   def copy_email(cls,email):
     email_found=Credential.find_by_email(email)
-    pyperclip.copy(email_found.email)        
+    pyperclip.copy(email_found.email)
+  @classmethod  
+  def check(cls,username,password):
+    current=''
+
+    for credential in Credential.credential_list:    
+      if (credential.username == log_username and credential.password == log_pass):
+        current=credential.username
+    return current
+                
